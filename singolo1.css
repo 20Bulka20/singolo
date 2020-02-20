@@ -106,20 +106,20 @@ header {
 .HatWrapper {
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: 69px;
+  margin-top: 62px;
 }
 
 .HatWrapper h2 {
   letter-spacing: -0.008em;
   font-size: 30px;
-  line-height: 18px;
+  line-height: 32px;
   color: #666d89;
   font-family: "Lato";
   font-weight: 900;
   text-align: left;
 }
 .HatWrapper p {
-  margin-top: 26px;
+  margin-top: 19px;
   width: 940px;
   height: 57px;
   font-size: 18px;
@@ -136,7 +136,18 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+h2,
+h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .ServiceList li h3 {
+  width: 219px;
   font-size: 18px;
   line-height: 18px;
   color: #666d89;
