@@ -78,42 +78,42 @@
   background-color: #464b5e;
   overflow: hidden;
 }
-.shipImg {
+.firstImg {
   height: 240px;
   width: 240px;
   object-position: -10px -12px;
 }
-.girlImg {
+.secondImg {
   object-position: -82px -43px;
 }
-.townImg {
+.thirdImg {
   object-position: -11px -1px;
 }
-.robotImg {
+.forthImg {
   object-position: -24px -3px;
 }
-.haresImg {
+.fifthImg {
   object-position: -10px -15px;
 }
-.greenObjImg {
+.sixthImg {
   object-position: -16px -4px;
 }
-.aliensImg {
+.seventhImg {
   object-position: -31px -39px;
 }
-.chickensImg {
+.eighthImg {
   object-position: -24px -32px;
 }
-.redCastleImg {
+.ninthImg {
   object-position: -16px -1px;
 }
-.lettersImg {
+.tenthImg {
   object-position: -141px -112px;
 }
-.creatureImg {
+.eleventhImg {
   object-position: -144px -174px;
 }
-.radioImg {
+.twelfthImg {
   object-position: -36px -59px;
 }
 
@@ -175,6 +175,7 @@
   text-align: left;
   margin-top: 14px;
   letter-spacing: -0.012em;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
