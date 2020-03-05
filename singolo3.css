@@ -2,13 +2,15 @@
   width: 1020px;
 }
 .Contact {
-  height: 648px;
+  height: 654px;
   background-color: #f06c64;
   padding: 69px 0 0 40px;
+  box-sizing: border-box;
+  border-bottom: 6px solid #ea676b;
 }
 .Contact-Field {
   display: flex;
-  margin-top: 47px;
+  margin-top: 46px;
   margin-right: 40px;
 }
 .Contact h2 {
@@ -17,7 +19,8 @@
   color: #f0d8d9;
   font-family: "Lato";
   font-weight: 900;
-  text-align: left;
+  /* text-align: left; */
+  text-align: justify;
 }
 .Contact p {
   width: 940px;
@@ -41,13 +44,59 @@ input {
   height: 38px;
   border-radius: 5px;
   background-color: #d6564f;
+  border: none;
+  margin-bottom: 16px;
+  padding-left: 15px;
+  box-sizing: border-box;
 }
+input::placeholder {
+  font-size: 12px;
+  line-height: 22px;
+  color: #f48c8f;
+  font-family: "Lato";
+  font-weight: 400;
+}
+.submit-button {
+  margin-top: 15px;
+  box-shadow: inset 0px 39px 0px -24px #e67a73;
+  background-color: #d6564f;
+  border-radius: 5px;
+  border: 1px solid #f0d8d9;
+  display: inline-block;
+  cursor: pointer;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-size: 15px;
+  padding: 6px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+.submit-button:hover {
+  background-color: #eb675e;
+}
+.submit-button:active {
+  position: relative;
+  top: 1px;
+}
+
 textarea {
   resize: none;
   width: 619px;
-  height: 202px;
+  height: 203px;
   border-radius: 5px;
   background-color: #d6564f;
+  border: none;
+  box-sizing: border-box;
+  padding-top: 8px;
+  padding-left: 14px;
+}
+textarea::placeholder {
+  font-size: 12px;
+  line-height: 22px;
+  color: #f48c8f;
+  font-family: "Lato";
+  font-weight: 400;
+  /* text-align: left; */
 }
 .Contact-Information h3 {
   font-size: 18px;
@@ -111,4 +160,64 @@ textarea {
 }
 .mail-icon:hover {
   background: url(assets/img/ico-mail-color.svg) no-repeat;
+}
+.footer {
+  width: 1020px;
+  height: 76px;
+  background-color: #2d303a;
+ box-sizing: border-box;
+ padding: 25px 40px;
+
+}
+.footer-items {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Lato";
+  font-weight: 400;
+  color: #666d89;
+  font-size: 12px;
+  line-height: 22px;
+}
+.facebook {
+  background: url("assets/img/Facebook.png") no-repeat;
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+.facebook:hover {
+  background: url("assets/img/Facebook1.png") no-repeat;
+}
+.google {
+  background: url("assets/img/Google.png") no-repeat;
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+.google:hover {
+  background: url("assets/img/Google1.png") no-repeat;
+}
+.twitter {
+  background: url("assets/img/Twitter.png") no-repeat;
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+.twitter:hover {
+  background: url("assets/img/Twitter1.png") no-repeat;
+}
+.linkedIn {
+  background: url("assets/img/LinkedIn.png") no-repeat;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.linkedIn:hover {
+  background: url("assets/img/LinkedIn1.png") no-repeat;
+}
+.SocialMedia {
+  display: flex;
+  margin-top: -3px;
+}
+.SocialMedia a {
+  margin-left: 5px;
 }
