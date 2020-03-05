@@ -1,0 +1,114 @@
+.wrapper {
+  width: 1020px;
+}
+.Contact {
+  height: 648px;
+  background-color: #f06c64;
+  padding: 69px 0 0 40px;
+}
+.Contact-Field {
+  display: flex;
+  margin-top: 47px;
+  margin-right: 40px;
+}
+.Contact h2 {
+  font-size: 30px;
+  line-height: 18px;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-weight: 900;
+  text-align: left;
+}
+.Contact p {
+  width: 940px;
+  height: 57px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-weight: 300;
+  text-align: justify;
+  margin-top: 27px;
+}
+.name {
+  width: 619px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: #d6564f;
+}
+input {
+  width: 619px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: #d6564f;
+}
+textarea {
+  resize: none;
+  width: 619px;
+  height: 202px;
+  border-radius: 5px;
+  background-color: #d6564f;
+}
+.Contact-Information h3 {
+  font-size: 18px;
+  line-height: 18px;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-weight: 900;
+  text-align: left;
+}
+.Contact-Information p {
+  width: 300px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-weight: 400;
+  text-align: justify;
+  margin-top: 10px;
+}
+.Contact-Items {
+  margin-top: 50px;
+}
+.Contact-Items li {
+  display: flex;
+  width: 300px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-weight: 400;
+}
+.Contact-Items li a {
+  display: flex;
+  text-decoration: none;
+  color: #f0d8d9;
+}
+
+.Contact-Items li a:hover {
+  color: #2d303a;
+}
+.Contact-Items li span {
+  display: block;
+  margin-top: 5px;
+  width: 23px;
+  height: 17px;
+}
+.adress-icon {
+  background: url(assets/img/ico-location-pin.svg) no-repeat;
+}
+.adress-icon:hover {
+  background: url(assets/img/ico-location-color.svg) no-repeat;
+}
+.phone-icon {
+  background: url(assets/img/ico-phone-contacts.svg) no-repeat;
+}
+.phone-icon:hover {
+  background: url(assets/img/ico-phone-color.svg) no-repeat;
+}
+.mail-icon {
+  background: url(assets/img/ico-mail.svg) no-repeat;
+}
+.mail-icon:hover {
+  background: url(assets/img/ico-mail-color.svg) no-repeat;
+}
