@@ -1,7 +1,7 @@
-body {
-  /* margin: 0 auto;*/
-  /* width: 1020px;  */
-}
+/* body {
+  margin: 0 auto;
+  width: 1020px; 
+} */
 .Wrapper {
   width: 1020px;
   font-family: "Lato", sans-serif;
@@ -481,6 +481,7 @@ input {
   border-radius: 5px;
   background-color: #d6564f;
   border: none;
+  color: #f0d8d9;
   margin-bottom: 16px;
   padding-left: 15px;
   box-sizing: border-box;
