@@ -1,7 +1,7 @@
-body {
-  /* margin: 0 auto;*/
-  /* width: 1020px;  */
-}
+/* body {
+  margin: 0 auto;
+  width: 1020px; 
+} */
 .Wrapper {
   width: 1020px;
   font-family: "Lato", sans-serif;
@@ -109,7 +109,6 @@ header {
   font-size: 30px;
   line-height: 32px;
   color: #666d89;
-  /* font-family: "Lato"; */
   font-weight: 900;
   text-align: left;
 }
@@ -120,7 +119,6 @@ header {
   font-size: 18px;
   line-height: 30px;
   color: #767e9e;
-  /* font-family: "Lato"; */
   font-weight: 300;
   text-align: justify;
 }
@@ -146,7 +144,6 @@ h3 {
   font-size: 18px;
   line-height: 18px;
   color: #666d89;
-  /* font-family: "Lato"; */
   font-weight: 900;
   text-align: left;
   white-space: nowrap;
@@ -159,7 +156,6 @@ h3 {
   font-size: 12px;
   line-height: 22px;
   color: #767e9e;
-  /* font-family: "Lato"; */
   font-weight: 400;
   text-align: justify;
   margin-top: 9px;
@@ -203,6 +199,14 @@ h3 {
 .star-ico {
   background: url("assets/img/star.svg") no-repeat;
 }
+.text-element-star{
+    margin-left: 20px;
+    margin-right: 1px;
+} 
+.text-element-heart{
+    margin-left: 20px;
+    margin-right: 1px;
+}
 /* ----------------------Singolo2------------------------- */
 .Portfolio {
   height: 869px; /*look box size 870px*/
@@ -215,14 +219,12 @@ h3 {
   font-size: 30px;
   line-height: 18px;
   color: #666d89;
-  /* font-family: "Lato"; */
   font-weight: 900;
 }
 .Portfolio p {
   font-size: 18px;
   line-height: 30px;
   color: #767e9e;
-  /* font-family: "Lato"; */
   font-weight: 300;
   margin-top: 27px;
 }
@@ -232,8 +234,7 @@ h3 {
 }
 .button-list button {
   font-size: 12px;
-  color: #767e9e;
-  /* font-family: "Lato"; */
+  color: #767e9e;  
   font-weight: 400;
   margin-right: 10px;
   text-align: center;
@@ -249,11 +250,12 @@ h3 {
 #BWeb {
   width: 78px;
   height: 22px;
+  letter-spacing: -0.03em;
 }
 #BGraphic {
   width: 93px;
   height: 22px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
 }
 #BArt {
   width: 57px;
@@ -331,7 +333,6 @@ h3 {
   font-size: 30px;
   line-height: 23px;
   color: #666d89;
-  /* font-family: "Lato"; */
   font-weight: 900;
   text-align: left;
   white-space: nowrap;
@@ -343,8 +344,7 @@ h3 {
   height: 57px;
   font-size: 18px;
   line-height: 30px;
-  color: #767e9e;
-  /* font-family: "Lato"; */
+  color: #767e9e;  
   font-weight: 300;
   margin-top: 24px;
   letter-spacing: 0em;
@@ -372,11 +372,10 @@ h3 {
 .crew-cards h3 {
   font-size: 18px;
   line-height: 18px;
-  color: #666d89;
-  /* font-family: "Lato"; */
+  color: #666d89;  
   font-weight: 900;
   text-align: left;
-  margin-top: 14px;
+  margin-top: 16px;
   letter-spacing: -0.012em;
   white-space: nowrap;
   overflow: hidden;
@@ -387,8 +386,7 @@ h3 {
   height: 66px;
   font-size: 12px;
   line-height: 22px;
-  color: #767e9e;
-  /* font-family: "Lato"; */
+  color: #767e9e;  
   font-weight: 400;
   text-align: justify;
   margin-top: 10px;
@@ -452,10 +450,8 @@ h3 {
 .Contact h2 {
   font-size: 30px;
   line-height: 18px;
-  color: #f0d8d9;
-  font-family: "Lato";
-  font-weight: 900;
-  /* text-align: left; */
+  color: #f0d8d9;  
+  font-weight: 900;  
   text-align: justify;
 }
 .Contact p {
@@ -464,7 +460,6 @@ h3 {
   font-size: 18px;
   line-height: 30px;
   color: #f0d8d9;
-  font-family: "Lato";
   font-weight: 300;
   text-align: justify;
   margin-top: 27px;
@@ -481,6 +476,7 @@ input {
   border-radius: 5px;
   background-color: #d6564f;
   border: none;
+  color: #f0d8d9;
   margin-bottom: 16px;
   padding-left: 15px;
   box-sizing: border-box;
@@ -488,8 +484,7 @@ input {
 input::placeholder {
   font-size: 12px;
   line-height: 22px;
-  color: #f48c8f;
-  font-family: "Lato";
+  color: #f48c8f;  
   font-weight: 400;
 }
 .submit-button {
@@ -521,6 +516,7 @@ textarea {
   height: 203px;
   border-radius: 5px;
   background-color: #d6564f;
+  color: #f0d8d9;
   border: none;
   box-sizing: border-box;
   padding-top: 8px;
@@ -529,16 +525,17 @@ textarea {
 textarea::placeholder {
   font-size: 12px;
   line-height: 22px;
-  color: #f48c8f;
-  font-family: "Lato";
+  color: #f48c8f;  
   font-weight: 400;
-  /* text-align: left; */
+  
+}
+.Contact-Information{
+    margin-top: 2px;
 }
 .Contact-Information h3 {
   font-size: 18px;
   line-height: 18px;
-  color: #f0d8d9;
-  font-family: "Lato";
+  color: #f0d8d9;  
   font-weight: 900;
   text-align: left;
 }
@@ -560,9 +557,9 @@ textarea::placeholder {
   width: 300px;
   font-size: 12px;
   line-height: 22px;
-  color: #f0d8d9;
-  font-family: "Lato";
+  color: #f0d8d9;  
   font-weight: 400;
+  margin-bottom: -1px;
 }
 .Contact-Items li a {
   display: flex;
@@ -606,53 +603,19 @@ textarea::placeholder {
 }
 .footer-items {
   display: flex;
-  justify-content: space-between;
-  font-family: "Lato";
+  justify-content: space-between;  
   font-weight: 400;
   color: #666d89;
   font-size: 12px;
   line-height: 22px;
 }
-/* .facebook {
-  background: url("assets/img/Facebook.png") no-repeat;
-  display: block;
-  width: 35px;
-  height: 35px;
-}
-.facebook:hover {
-  background: url("assets/img/Facebook1.png") no-repeat;
-}
-.google {
-  background: url("assets/img/Google.png") no-repeat;
-  display: block;
-  width: 35px;
-  height: 35px;
-}
-.google:hover {
-  background: url("assets/img/Google1.png") no-repeat;
-}
-.twitter {
-  background: url("assets/img/Twitter.png") no-repeat;
-  display: block;
-  width: 35px;
-  height: 35px;
-}
-.twitter:hover {
-  background: url("assets/img/Twitter1.png") no-repeat;
-}
-.linkedIn {
-  background: url("assets/img/LinkedIn.png") no-repeat;
-  display: block;
-  width: 32px;
-  height: 32px;
-}
-.linkedIn:hover {
-  background: url("assets/img/LinkedIn1.png") no-repeat;
-} */
-.footer-items.social-media-links {
+
+.footer-items .social-media-links {
   display: flex;
-  margin-top: -3px;
+ 
 }
-.footer-items.social-media-links a {
-  margin-left: 5px;
+.footer-items .social-media-links a {
+    margin-left: 5px;
+    margin-right: -1px;
+    margin-top: -3px;
 }
