@@ -60,6 +60,10 @@ header
 {
 	color: #f06c64;
 }
+.nav-list li a.active{
+	color: #f06c64;
+}
+
 .Slider
 {
 	background-color: #f06c64;
@@ -101,12 +105,47 @@ header
 	position: absolute;
 	top: 53px;
 }
+.screen-off{
+	visibility: hidden;
+}
 .hor-phone
 {
 	left: 425px;
 	position: absolute;
 	top: 174px;
 }
+.slide2-style{
+	background-color:  #648BF0;
+
+}
+/* Анимация слайдов */
+/* 
+.slider-content .slider-item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+@-webkit-keyframes fade {
+    from {
+		opacity: .4	;
+		color: #f06c64;
+    }
+    to {
+		opacity: 1;
+		color: white;
+    }
+} 
+ @keyframes fade {
+    from {
+		opacity: .4;
+		color: #f06c64;
+    }
+    to {
+		opacity: 1;
+		color: white;
+    }
+}  */
 .Our-Services
 {
 	background-color: #f2f2f2;
@@ -287,10 +326,14 @@ header
 	height: 22px;
 	width: 57px;
 }
-.button-list button:hover
+.button-list button:hover, button.active-btn
 {
 	background-color: #0f0f0f;
 	border: 1px solid #c5c5c5;
+}
+
+button:focus {
+    outline: none;
 }
 .Album
 {
@@ -594,6 +637,24 @@ textarea::placeholder
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 22px;
+}
+#message-block{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background: #0008;
+}
+#message-block.hidden{
+	display: none;
+}
+#message{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 2px solid #b23e35;
+	text-align: center;
 }
 .Contact-Information
 {

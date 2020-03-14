@@ -14,30 +14,48 @@
 
 <body>
     <div class="Wrapper">
-        <header>
+        <header id="header">
             <h1 class="logo">SINGOLO<span id="logo-astrix">*</span></h1>
             <nav class="nav-bar">
-                <ul class="nav-list">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">PORTFOLIO</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                <ul id="menu" class="nav-list">
+                    <li class="active"><a href="#header">HOME</a></li>
+                    <li><a href="#Services">SERVICES</a></li>
+                    <li><a href="#Portfolio">PORTFOLIO</a></li>
+                    <li><a href="#About">ABOUT</a></li>
+                    <li><a href="#Contact">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="Slider">
+            <section id="SliderID" class="Slider slide2-style">
                 <div>
-                    <a href="#" class="left-arrow"></a>
+                    <a class="left-arrow" onclick="minusSlide()"></a>
                 </div>
-                <img class="ver-phone" src="assets/img/iPhoneVertical.png" alt="iPhone Vertical" />
-                <img class="hor-phone" src="assets/img/iPhoneHorizontal.png" alt="iPhone Horizontal" />
+                <ul id="slider-content">
+                    <li class="slider-item">
+                        <div id="ver-phone">
+                            <img id="VerPhone" class="ver-phone" src="assets/img/iPhoneVertical.png"
+                                alt="iPhone Vertical" />
+                            <img id="VerPhoneoff" class="ver-phone" src="assets/img/offVerPhone.png"
+                                alt="iPhone Vertical" />
+                        </div>
+                        <div id="hor-phone">
+                            <img id="HorPhone" class="hor-phone" src="assets/img/iPhoneHorizontal.png"
+                                alt="iPhone Horizontal" />
+                            <img id="HorPhoneoff" class="hor-phone" src="assets/img/offHorPhone.png"
+                                alt="iPhone Horizontal" />
+                        </div>
+                    </li>
+
+                    <li class="slider-item">
+                        <img class="slide2" src="assets/img/slide 2.png" alt="slide2" />
+                    </li>
+                </ul>
                 <div>
-                    <a href="#" class="right-arrow"></a>
+                    <a class="right-arrow" onclick="plusSlide()"></a>
                 </div>
             </section>
-            <section class="Our-Services">
+            <section id="Services" class="Our-Services">
                 <div class="services-wrapper">
                     <h2>Our Services</h2>
                     <p>
@@ -113,13 +131,13 @@
                 </div>
             </section>
 
-            <section class="Portfolio">
+            <section id="Portfolio" class="Portfolio">
                 <div class="potfolio-upper-block">
                     <h2>Portfolio</h2>
                     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                     </p>
 
-                    <div class="button-list">
+                    <div id="PortfolioBtn" class="button-list">
                         <button id="BAll" type="button">All</button>
                         <button id="BWeb" type="button">Web Design</button>
                         <button id="BGraphic" type="button">Graphic Design</button>
@@ -128,22 +146,22 @@
 
                 </div>
                 <figure class="Album">
-                    <div><img src="assets/img/ship.png" alt="Ship" class="first-img"></div>
-                    <div><img src="assets/img/girl.png" alt="Orange girl" class="second-img"></div>
-                    <div><img src="assets/img/Town.png" alt="Town" class="third-img"></div>
-                    <div><img src="assets/img/Robot.png" alt="Robot" class="forth-img"></div>
-                    <div><img src="assets/img/Hares.png" alt="Hares" class="fifth-img"></div>
-                    <div><img src="assets/img/GreenObj.png" alt="Bunch of green objects" class="sixth-img"></div>
-                    <div><img src="assets/img/Aliens.png" alt="Aliens" class="seventh-img"></div>
-                    <div><img src="assets/img/Chicken.png" alt="Chickens" class="eighth-img"></div>
-                    <div><img src="assets/img/RedCastle.png" alt="Red Castle" class="ninth-img"></div>
-                    <div><img src="assets/img/Letters.png" alt="Letters" class="tenth-img"></div>
-                    <div><img src="assets/img/CreatureWhite.png" alt="White creature" class="eleventh-img"></div>
-                    <div><img src="assets/img/Radio.png" alt="Radio" class="twelfth-img"></div>                    
+                    <div><img src="assets/img/ship.png" alt="Ship" class="first-img Album_img"></div>
+                    <div><img src="assets/img/girl.png" alt="Orange girl" class="second-img Album_img"></div>
+                    <div><img src="assets/img/Town.png" alt="Town" class="third-img Album_img"></div>
+                    <div><img src="assets/img/Robot.png" alt="Robot" class="forth-img Album_img"></div>
+                    <div><img src="assets/img/Hares.png" alt="Hares" class="fifth-img Album_img"></div>
+                    <div><img src="assets/img/GreenObj.png" alt="Bunch of green objects" class="sixth-img Album_img"></div>
+                    <div><img src="assets/img/Aliens.png" alt="Aliens" class="seventh-img Album_img"></div>
+                    <div><img src="assets/img/Chicken.png" alt="Chickens" class="eighth-img Album_img"></div>
+                    <div><img src="assets/img/RedCastle.png" alt="Red Castle" class="ninth-img Album_img"></div>
+                    <div><img src="assets/img/Letters.png" alt="Letters" class="tenth-img Album_img"></div>
+                    <div><img src="assets/img/CreatureWhite.png" alt="White creature" class="eleventh-img Album_img"></div>
+                    <div><img src="assets/img/Radio.png" alt="Radio" class="twelfth-img Album_img"></div>
                 </figure>
 
             </section>
-            <section class="About-Us">
+            <section id="About" class="About-Us">
                 <h2>About Us</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
                     Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
@@ -193,7 +211,7 @@
 
             </section>
 
-            <section class="Contact">
+            <section id="Contact" class="Contact">
                 <h2>Get a Quote</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
                     Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
@@ -202,10 +220,20 @@
                     <form name="Contact-Info" method="post" action="#" autocomplete="off">
                         <input type="text" name="name" class="name-input" placeholder="Name (Required)" required>
                         <input type="email" name="email" class="email-input" placeholder="Email (Required)" required>
-                        <input type="text" name="subject" class="subject-input" placeholder="Subject">
-                        <textarea name="details" cols="50" rows="50"
+                        <input type="text" id="subject" class="subject-input" placeholder="Subject">
+                        <textarea id="details" cols="50" rows="50"
                             placeholder="Describe your project in detail..."></textarea>
-                        <button name="submit" type="submit" class="submit-button">Submit</button>
+                        <button id="btn" name="submit" type="submit" class="submit-button">Submit</button>
+                        <div id="message-block" class="hidden">
+                            <div id="message">
+                                <p>Письмо отправлено</p>
+                                <p id="Theme"></p>
+                                <p id="Description"></p>
+                                <br>
+                                <button id="close-btn">OK</button>
+                            </div>
+                        </div>
+
                     </form>
 
                     <div class="Contact-Information">
@@ -239,4 +267,5 @@
 
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
