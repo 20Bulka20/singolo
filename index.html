@@ -145,19 +145,19 @@
                     </div>
 
                 </div>
-                <figure class="Album">
-                    <div><img src="assets/img/ship.png" alt="Ship" class="first-img Album_img"></div>
-                    <div><img src="assets/img/girl.png" alt="Orange girl" class="second-img Album_img"></div>
-                    <div><img src="assets/img/Town.png" alt="Town" class="third-img Album_img"></div>
-                    <div><img src="assets/img/Robot.png" alt="Robot" class="forth-img Album_img"></div>
-                    <div><img src="assets/img/Hares.png" alt="Hares" class="fifth-img Album_img"></div>
-                    <div><img src="assets/img/GreenObj.png" alt="Bunch of green objects" class="sixth-img Album_img"></div>
-                    <div><img src="assets/img/Aliens.png" alt="Aliens" class="seventh-img Album_img"></div>
-                    <div><img src="assets/img/Chicken.png" alt="Chickens" class="eighth-img Album_img"></div>
-                    <div><img src="assets/img/RedCastle.png" alt="Red Castle" class="ninth-img Album_img"></div>
-                    <div><img src="assets/img/Letters.png" alt="Letters" class="tenth-img Album_img"></div>
-                    <div><img src="assets/img/CreatureWhite.png" alt="White creature" class="eleventh-img Album_img"></div>
-                    <div><img src="assets/img/Radio.png" alt="Radio" class="twelfth-img Album_img"></div>
+                <figure id="Album" class="Album">
+                    <div class="Album-img-block"><img src="assets/img/ship.png" alt="Ship" class="first-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/girl.png" alt="Orange girl" class="second-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Town.png" alt="Town" class="third-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Robot.png" alt="Robot" class="forth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Hares.png" alt="Hares" class="fifth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/GreenObj.png" alt="Bunch of green objects" class="sixth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Aliens.png" alt="Aliens" class="seventh-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Chicken.png" alt="Chickens" class="eighth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/RedCastle.png" alt="Red Castle" class="ninth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Letters.png" alt="Letters" class="tenth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/CreatureWhite.png" alt="White creature" class="eleventh-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Radio.png" alt="Radio" class="twelfth-img Album_img"></div>
                 </figure>
 
             </section>
@@ -217,9 +217,9 @@
                     Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="Contact-Field">
-                    <form name="Contact-Info" method="post" action="#" autocomplete="off">
-                        <input type="text" name="name" class="name-input" placeholder="Name (Required)" required>
-                        <input type="email" name="email" class="email-input" placeholder="Email (Required)" required>
+                    <form id="myForm" name="Contact-Info" method="post" action="#" autocomplete="off" >
+                        <input id="name" type="text" name="name" class="name-input" placeholder="Name (Required)" required>
+                        <input id="email" type="email" name="email" class="email-input" placeholder="Email (Required)" required>
                         <input type="text" id="subject" class="subject-input" placeholder="Subject">
                         <textarea id="details" cols="50" rows="50"
                             placeholder="Describe your project in detail..."></textarea>

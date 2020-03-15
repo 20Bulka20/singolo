@@ -1,4 +1,4 @@
-// Header
+//__________ Header_____________________________________________
 const MENU = document.getElementById('menu');
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
@@ -6,25 +6,27 @@ MENU.addEventListener('click', (event) => {
 });
 // _____________Slider__________________________________________
 const SLIDER = document.getElementById('SliderID');
-let slideIndex = 1;   /* Индекс слайда по умолчанию */
+const HORPHONE = document.getElementById('hor-phone');
+const VERPHONE = document.getElementById('ver-phone');
+const SLIDESList = document.getElementById('slider-content');
+let slideIndex = 1;
 
 showSlides(slideIndex);
 
-function plusSlide() {     
+function plusSlide() {
     showSlides(slideIndex += 1);
 }
 
-function minusSlide() { 
+function minusSlide() {
     showSlides(slideIndex -= 1);
 }
 
-function currentSlide(n) { /* Устанавливает текущий слайд */
+function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
     let slides = document.getElementsByClassName("slider-item");
-    const SLIDESList = document.getElementById('slider-content');
 
     if (n > slides.length) {
         slideIndex = 1;
@@ -32,7 +34,7 @@ function showSlides(n) {
     if (n < 1) {
         slideIndex = slides.length;
     }
-    SLIDESList.querySelectorAll('li').forEach(slide=> slide.style.display = "none");    
+    SLIDESList.querySelectorAll('li').forEach(slide => slide.style.display = "none");
     slides[slideIndex - 1].style.display = "block";
 
     //Slider background switch
@@ -43,10 +45,7 @@ function showSlides(n) {
         SLIDER.classList.add('slide2-style');
     }
 }
-
-const HORPHONE = document.getElementById('hor-phone');
-const VERPHONE = document.getElementById('ver-phone');
-
+//_________________Slider. Активация экранов телефонов______________
 HORPHONE.addEventListener('click', (event) => {
     HORPHONE.querySelectorAll('img').forEach(el => el.classList.remove('screen-off'));
     event.target.classList.add('screen-off');
@@ -56,47 +55,58 @@ VERPHONE.addEventListener('click', (event) => {
     event.target.classList.add('screen-off');
 });
 
-//_________________Portfolio______________________
-// Portfolio. Переключение табов
-// При пеерключении табов в верхней части блока, новый таб должен становиться активным. +
-//Страница может не переключаться, оставаясь на своем месте. +
-//Картинки снизу, должны менять свои позиции, сдвигаясь на одинаковую величину. Либо они должны перемещаться в случайном порядке. 
-//Главное, чтобы те же картинки не оставались на своем месте.
+//________________________Portfolio_____________________________
+
 const PORTFOLIO_BTN = document.getElementById('PortfolioBtn');
+const IMG_Container = document.getElementById('Album');
 PORTFOLIO_BTN.addEventListener('click', (event) => {
     PORTFOLIO_BTN.querySelectorAll('button').forEach(el => el.classList.remove('active-btn'));
     event.target.classList.add('active-btn');
-    let IMG = document.getElementsByClassName("Album_img");
-    for(let i = 0; i<IMG.length; i++)
-    { 
-        IMG[i]=IMG[i+1];
-    }
+    shuffle(IMG_Container);
 });
 
-// function ImgShift(){
-//     let IMG = document.getElementsByClassName("Album_img");
-//     for(let i = 0; i<IMG.length; i++)
-//     { 
-//         IMG[i]=IMG[i+1];
-//     }
+function shuffle(container) {
+    [...container.children].sort(() => Math.random() > 0.5 ? 1 : -1).forEach(f => container.appendChild(f));
+}
 
-// }
+//___________ Portfolio. Взаимодействие с картинками____________________________
 
 
-
-
-// Portfolio. Взаимодействие с картинками
-// При нажатии на картинку вокруг нее должна появиться рамка цвета #F06C64 величиной 5px. 
-//При нажатии на другую картинку, предыдущая должна потерять рамку, а новая ее получить.
+IMG_Container.addEventListener('click', (event) => {
+    IMG_Container.querySelectorAll('div').forEach(el => el.classList.remove('chosen'));
+    event.target.closest('div').classList.add('chosen');
+});
 
 
 
+// _______________________Form___________________________
 
-// Form
-// function stopDefAction(evt) {
-//     evt.preventDefault();
-// }
-// document.getElementById('btn').addEventListener(
-//     'click', stopDefAction, false
-// );
+const SUB_BUTTON = document.getElementById('btn');
+const CLOSE_BUTTON = document.getElementById('close-btn');
+const form = document.getElementById('myForm');
+form.onsubmit = submit;
 
+function submit(event) {
+
+    SUB_BUTTON.addEventListener('click', () => {
+        const SUBJECT = document.getElementById('subject').value;
+        const DETAILS = document.getElementById('details').value;
+
+        if (SUBJECT == "") document.getElementById('Theme').innerText = "Без темы";
+        else document.getElementById('Theme').innerText = "Тема: " + SUBJECT;
+
+        if (DETAILS == "") document.getElementById('Description').innerText = "Без описания";
+        else document.getElementById('Description').innerText = "Описание: " + DETAILS;
+
+        document.getElementById('message-block').classList.remove('hidden');
+    });
+
+    CLOSE_BUTTON.addEventListener('click', () => {
+        document.getElementById('Theme').innerText = "";
+        document.getElementById('Description').innerText = "";
+        document.getElementById('message-block').classList.add('hidden');
+        form.reset();
+
+    });
+    event.preventDefault();
+}
