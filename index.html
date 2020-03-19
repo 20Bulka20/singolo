@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="Wrapper">
+    <div id="wrapperId" class="Wrapper">
         <header id="header">
             <h1 class="logo">SINGOLO<span id="logo-astrix">*</span></h1>
             <nav class="nav-bar">
@@ -34,15 +34,19 @@
                 <ul id="slider-content">
                     <li class="slider-item">
                         <div id="ver-phone">
-                            <img id="VerPhone" class="ver-phone" src="assets/img/iPhoneVertical.png"
+                            <img id="ver-phone-shadow" class="ver-phone" src="assets/img/phone-vertical-shadow.png"
+                                alt="iPhone Vertical"/>
+                            <img id="VerPhone" class="ver-phone" src="assets/img/iPhoneVerticalnsh.png"
                                 alt="iPhone Vertical" />
-                            <img id="VerPhoneoff" class="ver-phone" src="assets/img/offVerPhone.png"
+                            <img id="VerPhoneoff" class="ver-phone" src="assets/img/offVerPhoneshad.png"
                                 alt="iPhone Vertical" />
                         </div>
                         <div id="hor-phone">
-                            <img id="HorPhone" class="hor-phone" src="assets/img/iPhoneHorizontal.png"
+                            <img id="hor-phone-shadow" class="hor-phone" src="assets/img/phone-horizontal-shadow.png"
+                            alt="iPhone Vertical"/>
+                            <img id="HorPhone" class="hor-phone" src="assets/img/iPhoneHorizontalshad.png"
                                 alt="iPhone Horizontal" />
-                            <img id="HorPhoneoff" class="hor-phone" src="assets/img/offHorPhone.png"
+                            <img id="HorPhoneoff" class="hor-phone" src="assets/img/offHorPhoneshad.png"
                                 alt="iPhone Horizontal" />
                         </div>
                     </li>
@@ -226,7 +230,7 @@
                         <button id="btn" name="submit" type="submit" class="submit-button">Submit</button>
                         <div id="message-block" class="hidden">
                             <div id="message">
-                                <p>Письмо отправлено</p>
+                                <p>Письмо отправлено.</p>
                                 <p id="Theme"></p>
                                 <p id="Description"></p>
                                 <br>

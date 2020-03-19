@@ -4,6 +4,25 @@ MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
 });
+
+document.addEventListener('scroll', onScroll);
+function onScroll(event) {
+    const curpos = window.scrollY;
+    const menulinks = document.querySelectorAll('#menu a');
+
+    document.querySelectorAll('section, header').forEach(el => {
+        if (el.offsetTop <= curpos && (el.offsetTop + el.offsetHeight) > curpos) {
+
+            menulinks.forEach(a => {
+                a.classList.remove('active');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active');
+                }
+
+            });
+        }
+    });
+}
 // _____________Slider__________________________________________
 const SLIDER = document.getElementById('SliderID');
 const HORPHONE = document.getElementById('hor-phone');
@@ -71,14 +90,10 @@ function shuffle(container) {
 
 //___________ Portfolio. Взаимодействие с картинками____________________________
 
-
 IMG_Container.addEventListener('click', (event) => {
     IMG_Container.querySelectorAll('div').forEach(el => el.classList.remove('chosen'));
     event.target.closest('div').classList.add('chosen');
 });
-
-
-
 // _______________________Form___________________________
 
 const SUB_BUTTON = document.getElementById('btn');
