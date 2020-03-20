@@ -28,42 +28,53 @@ const SLIDER = document.getElementById('SliderID');
 const HORPHONE = document.getElementById('hor-phone');
 const VERPHONE = document.getElementById('ver-phone');
 const SLIDESList = document.getElementById('slider-content');
-let slideIndex = 1;
+//let slideIndex = 1;
+let items = document.querySelectorAll('.slider-item');
+let CurrentItem = 0;
+let isInabled = true;
 
-showSlides(slideIndex);
-
-function plusSlide() {
-    showSlides(slideIndex += 1);
+function changeCurrentItem(n) {
+    CurrentItem = (n + items.length) % items.length;
+}
+function hideItem(direction) {
+    isInabled = false;
+    items[CurrentItem].classList.add(direction);
+    items[CurrentItem].addEventListener('animationend', function () {
+        this.classList.remove('slactive', direction);
+    })
+}
+function showItem(direction) {
+    items[CurrentItem].classList.add('next', direction);
+    items[CurrentItem].addEventListener('animationend', function () {
+        this.classList.remove('next', direction);
+        this.classList.add('slactive');
+        isInabled = true;
+    })
+}
+function previousItem(n) {
+    hideItem('to-right');
+    changeCurrentItem(n - 1);
+    showItem('from-left');
+}
+function nextItem(n) {
+    hideItem('to-left');
+    changeCurrentItem(n + 1);
+    showItem('from-right');
 }
 
-function minusSlide() {
-    showSlides(slideIndex -= 1);
-}
+document.querySelector('.control.left').addEventListener('click', function () {
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+    if (isInabled) {
+        previousItem(CurrentItem);
+    }
+});
+document.querySelector('.control.right').addEventListener('click', function () {
 
-function showSlides(n) {
-    let slides = document.getElementsByClassName("slider-item");
+    if (isInabled) {
+        nextItem(CurrentItem);
+    }
+});
 
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-    SLIDESList.querySelectorAll('li').forEach(slide => slide.style.display = "none");
-    slides[slideIndex - 1].style.display = "block";
-
-    //Slider background switch
-    if (slideIndex === 1) {
-        SLIDER.classList.remove('slide2-style');
-    }
-    else {
-        SLIDER.classList.add('slide2-style');
-    }
-}
 //_________________Slider. Активация экранов телефонов______________
 HORPHONE.addEventListener('click', (event) => {
     HORPHONE.querySelectorAll('img').forEach(el => el.classList.remove('screen-off'));

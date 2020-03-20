@@ -28,36 +28,41 @@
         </header>
         <main>
             <section id="SliderID" class="Slider slide2-style">
-                <div>
-                    <a class="left-arrow" onclick="minusSlide()"></a>
-                </div>
+                <div class="carousel">
+
                 <ul id="slider-content">
-                    <li class="slider-item">
-                        <div id="ver-phone">
-                            <img id="ver-phone-shadow" class="ver-phone" src="assets/img/phone-vertical-shadow.png"
-                                alt="iPhone Vertical"/>
-                            <img id="VerPhone" class="ver-phone" src="assets/img/iPhoneVerticalnsh.png"
-                                alt="iPhone Vertical" />
-                            <img id="VerPhoneoff" class="ver-phone" src="assets/img/offVerPhoneshad.png"
-                                alt="iPhone Vertical" />
-                        </div>
-                        <div id="hor-phone">
-                            <img id="hor-phone-shadow" class="hor-phone" src="assets/img/phone-horizontal-shadow.png"
-                            alt="iPhone Vertical"/>
-                            <img id="HorPhone" class="hor-phone" src="assets/img/iPhoneHorizontalshad.png"
-                                alt="iPhone Horizontal" />
-                            <img id="HorPhoneoff" class="hor-phone" src="assets/img/offHorPhoneshad.png"
-                                alt="iPhone Horizontal" />
+
+                    <li class="slider-item slactive">
+                        <div class="slide1">
+                            <div id="ver-phone">
+                                <img id="ver-phone-shadow" class="ver-phone" src="assets/img/phone-vertical-shadow.png"
+                                    alt="iPhone Vertical" />
+                                <img id="VerPhone" class="ver-phone" src="assets/img/iPhoneVerticalnsh.png"
+                                    alt="iPhone Vertical" />
+                                <img id="VerPhoneoff" class="ver-phone" src="assets/img/offVerPhoneshad.png"
+                                    alt="iPhone Vertical" />
+                            </div>
+                            <div id="hor-phone">
+                                <img id="hor-phone-shadow" class="hor-phone"
+                                    src="assets/img/phone-horizontal-shadow.png" alt="iPhone Vertical" />
+                                <img id="HorPhone" class="hor-phone" src="assets/img/iPhoneHorizontalshad.png"
+                                    alt="iPhone Horizontal" />
+                                <img id="HorPhoneoff" class="hor-phone" src="assets/img/offHorPhoneshad.png"
+                                    alt="iPhone Horizontal" />
+                            </div>
                         </div>
                     </li>
-
                     <li class="slider-item">
                         <img class="slide2" src="assets/img/slide 2.png" alt="slide2" />
                     </li>
+                    <div class="control left">
+                        <a class="arrow left left-arrow" ></a>
+                    </div>
+                    <div class="control right">
+                        <a class="arrow right right-arrow"></a>
+                    </div>
                 </ul>
-                <div>
-                    <a class="right-arrow" onclick="plusSlide()"></a>
-                </div>
+            </div>
             </section>
             <section id="Services" class="Our-Services">
                 <div class="services-wrapper">
@@ -150,18 +155,30 @@
 
                 </div>
                 <figure id="Album" class="Album">
-                    <div class="Album-img-block"><img src="assets/img/ship.png" alt="Ship" class="first-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/girl.png" alt="Orange girl" class="second-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Town.png" alt="Town" class="third-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Robot.png" alt="Robot" class="forth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Hares.png" alt="Hares" class="fifth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/GreenObj.png" alt="Bunch of green objects" class="sixth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Aliens.png" alt="Aliens" class="seventh-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Chicken.png" alt="Chickens" class="eighth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/RedCastle.png" alt="Red Castle" class="ninth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Letters.png" alt="Letters" class="tenth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/CreatureWhite.png" alt="White creature" class="eleventh-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Radio.png" alt="Radio" class="twelfth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/ship.png" alt="Ship" class="first-img Album_img">
+                    </div>
+                    <div class="Album-img-block"><img src="assets/img/girl.png" alt="Orange girl"
+                            class="second-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Town.png" alt="Town" class="third-img Album_img">
+                    </div>
+                    <div class="Album-img-block"><img src="assets/img/Robot.png" alt="Robot"
+                            class="forth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Hares.png" alt="Hares"
+                            class="fifth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/GreenObj.png" alt="Bunch of green objects"
+                            class="sixth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Aliens.png" alt="Aliens"
+                            class="seventh-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Chicken.png" alt="Chickens"
+                            class="eighth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/RedCastle.png" alt="Red Castle"
+                            class="ninth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Letters.png" alt="Letters"
+                            class="tenth-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/CreatureWhite.png" alt="White creature"
+                            class="eleventh-img Album_img"></div>
+                    <div class="Album-img-block"><img src="assets/img/Radio.png" alt="Radio"
+                            class="twelfth-img Album_img"></div>
                 </figure>
 
             </section>
@@ -221,9 +238,11 @@
                     Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="Contact-Field">
-                    <form id="myForm" name="Contact-Info" method="post" action="#" autocomplete="off" >
-                        <input id="name" type="text" name="name" class="name-input" placeholder="Name (Required)" required>
-                        <input id="email" type="email" name="email" class="email-input" placeholder="Email (Required)" required>
+                    <form id="myForm" name="Contact-Info" method="post" action="#" autocomplete="off">
+                        <input id="name" type="text" name="name" class="name-input" placeholder="Name (Required)"
+                            required>
+                        <input id="email" type="email" name="email" class="email-input" placeholder="Email (Required)"
+                            required>
                         <input type="text" id="subject" class="subject-input" placeholder="Subject">
                         <textarea id="details" cols="50" rows="50"
                             placeholder="Describe your project in detail..."></textarea>
