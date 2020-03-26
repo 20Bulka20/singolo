@@ -6,7 +6,7 @@ MENU.addEventListener('click', (event) => {
 });
 
 document.addEventListener('scroll', onScroll);
-function onScroll(event) {
+function onScroll() {
     const curpos = window.scrollY;
     const menulinks = document.querySelectorAll('#menu a');
 
@@ -23,12 +23,42 @@ function onScroll(event) {
         }
     });
 }
+//___________________BurgerMenu_________________________________
+//function BurgerMenu(selector){
+    let burgmenu = document.getElementById('burger-menu');
+    let burgbtn = document.getElementById('burg-btn');
+    let burglinks = document.getElementById('burg-nav');
+    // let burg_overlay = document.getElementsByClassName('burger-menu-overlay');
+
+    burgbtn.addEventListener('click', (event)=>{
+        event.preventDefault();
+        switchMenu();
+        
+    });
+    burglinks.addEventListener('click', ()=>{
+        burglinks.querySelectorAll('a').forEach(el =>  switchMenu());
+       
+    });
+    // burg_overlay.addEventListener('click', ()=> switchMenu());
+
+    function switchMenu(){
+        if(burgmenu.classList.contains('burger-menu-active')){
+            burgmenu.classList.remove('burger-menu-active');
+            }
+            else {
+                burgmenu.classList.add('burger-menu-active');
+            }
+    }
+
+//}
+// BurgerMenu('.burger-menu');
+
 // _____________Slider__________________________________________
 const SLIDER = document.getElementById('SliderID');
 const HORPHONE = document.getElementById('hor-phone');
 const VERPHONE = document.getElementById('ver-phone');
 const SLIDESList = document.getElementById('slider-content');
-//let slideIndex = 1;
+
 let items = document.querySelectorAll('.slider-item');
 let CurrentItem = 0;
 let isInabled = true;
@@ -110,29 +140,25 @@ IMG_Container.addEventListener('click', (event) => {
 const SUB_BUTTON = document.getElementById('btn');
 const CLOSE_BUTTON = document.getElementById('close-btn');
 const form = document.getElementById('myForm');
-form.onsubmit = submit;
 
-function submit(event) {
-
-    SUB_BUTTON.addEventListener('click', () => {
-        const SUBJECT = document.getElementById('subject').value;
-        const DETAILS = document.getElementById('details').value;
-
-        if (SUBJECT == "") document.getElementById('Theme').innerText = "Без темы";
-        else document.getElementById('Theme').innerText = "Тема: " + SUBJECT;
-
-        if (DETAILS == "") document.getElementById('Description').innerText = "Без описания";
-        else document.getElementById('Description').innerText = "Описание: " + DETAILS;
-
-        document.getElementById('message-block').classList.remove('hidden');
-    });
-
-    CLOSE_BUTTON.addEventListener('click', () => {
-        document.getElementById('Theme').innerText = "";
-        document.getElementById('Description').innerText = "";
-        document.getElementById('message-block').classList.add('hidden');
-        form.reset();
-
-    });
+form.addEventListener('submit', (event) => {
     event.preventDefault();
-}
+    const SUBJECT = document.getElementById('subject').value;
+    const DETAILS = document.getElementById('details').value;
+
+    if (SUBJECT == "") document.getElementById('Theme').innerText = "Без темы";
+    else document.getElementById('Theme').innerText = "Тема: " + SUBJECT;
+
+    if (DETAILS == "") document.getElementById('Description').innerText = "Без описания";
+    else document.getElementById('Description').innerText = "Описание: " + DETAILS;
+
+    document.getElementById('message-block').classList.remove('hidden');
+});
+
+CLOSE_BUTTON.addEventListener('click', () => {
+    document.getElementById('Theme').innerText = "";
+    document.getElementById('Description').innerText = "";
+    document.getElementById('message-block').classList.add('hidden');
+    form.reset();
+
+});

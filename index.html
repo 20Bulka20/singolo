@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="fontsstyle.css" />
@@ -13,8 +14,24 @@
 </head>
 
 <body>
-    <div id="wrapperId" class="Wrapper">
-        <header id="header">
+<div id="wrapperId" class="Wrapper">
+    <header id="header">
+        
+            <div id="burger-menu" class="burger-menu burger-menu-active">
+                <a href="#" id="burg-btn" class="burger-menu-btn">
+                    <span class="burger-menu-lines"></span>
+                </a>
+                <nav id="burg-nav" class="burger-menu-nav">
+                    <a href="#header" class="burger-menu-link">HOME</a>
+                    <a href="#Services" class="burger-menu-link">SERVICES</a>
+                    <a href="#Portfolio" class="burger-menu-link">PORTFOLIO</a>
+                    <a href="#About" class="burger-menu-link">ABOUT</a>
+                    <a href="#Contact" class="burger-menu-link">CONTACT</a>
+                </nav> 
+                <div class="burger-menu-overlay">
+
+                </div>
+            </div>
             <h1 class="logo">SINGOLO<span id="logo-astrix">*</span></h1>
             <nav class="nav-bar">
                 <ul id="menu" class="nav-list">
@@ -25,30 +42,56 @@
                     <li><a href="#Contact">CONTACT</a></li>
                 </ul>
             </nav>
-        </header>
-        <main>
-            <section id="SliderID" class="Slider slide2-style">
-                <div class="carousel">
+    </header>
+    <main>
+        <section id="SliderID" class="Slider slide2-style">
+            <div class="carousel">
 
                 <ul id="slider-content">
 
                     <li class="slider-item slactive">
                         <div class="slide1">
                             <div id="ver-phone">
-                                <img id="ver-phone-shadow" class="ver-phone" src="assets/img/phone-vertical-shadow.png"
-                                    alt="iPhone Vertical" />
-                                <img id="VerPhone" class="ver-phone" src="assets/img/iPhoneVerticalnsh.png"
-                                    alt="iPhone Vertical" />
-                                <img id="VerPhoneoff" class="ver-phone" src="assets/img/offVerPhoneshad.png"
-                                    alt="iPhone Vertical" />
+
+                                <img id="ver-phone-shadow" class="ver-phone" srcset="assets/img/phone-vertical-shadow-mob.png 89w,
+                                    assets/img/phone-vertical-shadow-tab.png 182w,
+                                    assets/img/phone-vertical-shadow.png 240w" sizes="(max-width: 375px) 89px, 
+                                    (max-width: 768px) 182px, 
+                                    240px" src="assets/img/phone-vertical-shadow.png" alt="iPhone Vertical" />
+
+                                <img id="VerPhone" class="ver-phone" srcset="assets/img/iPhoneVertical-mob.png 80w, 
+                                    assets/img/iPhoneVertical-tab.png 163w, 
+                                    assets/img/iPhoneVerticalnsh.png 216w" sizes="(max-width: 375px) 80px, 
+                                    (max-width: 768px) 163px, 
+                                    216px" src="assets/img/iPhoneVerticalnsh.png" alt="iPhone Vertical" />
+
+
+                                <img id="VerPhoneoff" class="ver-phone" srcset="assets/img/offVerPhone-mob.png 80w,
+                                    assets/img/offVerPhone-tab.png 163w,
+                                    assets/img/offVerPhone.png 216w" sizes="(max-width: 375px) 80px, 
+                                    (max-width: 768px) 163px, 
+                                    216px" src="assets/img/offVerPhoneshad.png" alt="iPhone Vertical" />
+
                             </div>
                             <div id="hor-phone">
-                                <img id="hor-phone-shadow" class="hor-phone"
-                                    src="assets/img/phone-horizontal-shadow.png" alt="iPhone Vertical" />
-                                <img id="HorPhone" class="hor-phone" src="assets/img/iPhoneHorizontalshad.png"
-                                    alt="iPhone Horizontal" />
-                                <img id="HorPhoneoff" class="hor-phone" src="assets/img/offHorPhoneshad.png"
-                                    alt="iPhone Horizontal" />
+                                <img id="hor-phone-shadow" class="hor-phone" srcset="assets/img/phone-horizontal-shadow-mob.png 179w,
+                                    assets/img/phone-horizontal-shadow-tab.png 364w,
+                                    assets/img/phone-horizontal-shadow.png 483w" sizes="(max-width: 375px) 179px, 
+                                    (max-width: 768px) 364px, 
+                                    483px" src="assets/img/phone-horizontal-shadow.png" alt="iPhone Horizontal" />
+
+                                <img id="HorPhone" class="hor-phone" srcset="assets/img/iPhoneHorizontal-mob.png 169w, 
+                                    assets/img/iPhoneHorizontal-tab.png 345w, 
+                                    assets/img/iPhoneHorizontalshad.png 458w" sizes="(max-width: 375px) 169px, 
+                                    (max-width: 768px) 345px, 
+                                    458px" src="assets/img/iPhoneHorizontalshad.png" alt="iPhone Horizontal" />
+
+
+                                <img id="HorPhoneoff" class="hor-phone" srcset="assets/img/offHorPhone-mob.png 169w, 
+                                    assets/img/offHorPhone-tab.png 345w, 
+                                    assets/img/offHorPhoneshad.png 458w" sizes="(max-width: 375px) 169px, 
+                                    (max-width: 768px) 345px, 
+                                    458px" src="assets/img/offHorPhoneshad.png" alt="iPhone Horizontal" />
                             </div>
                         </div>
                     </li>
@@ -56,239 +99,238 @@
                         <img class="slide2" src="assets/img/slide 2.png" alt="slide2" />
                     </li>
                     <div class="control left">
-                        <a class="arrow left left-arrow" ></a>
+                        <a class="arrow left left-arrow"></a>
                     </div>
                     <div class="control right">
                         <a class="arrow right right-arrow"></a>
                     </div>
                 </ul>
             </div>
-            </section>
-            <section id="Services" class="Our-Services">
-                <div class="services-wrapper">
-                    <h2>Our Services</h2>
-                    <p>
-                        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-                        Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
-                        lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh.
-                    </p>
-
-
-                    <ul class="service-list">
-                        <li class="design-block">
-                            <div class="pen-ico"></div>
-                            <div class="text-element">
-                                <h3>Custom Design</h3>
-                                <p>
-                                    Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
-                                    laoreet, viverra lacus ut, ultrices velit.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="idea-block">
-                            <div class="bulb-ico"></div>
-                            <div class="text-element">
-                                <h3>Inovative Ideas</h3>
-                                <p>
-                                    Quisque luctus, quam eget molestie com-modo, lacus purus curus purus, nec rutrum
-                                    tellus dolor id lorem.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="love-block">
-                            <div class="heart-ico"></div>
-                            <div class="text-element-heart">
-                                <h3>Love Is The Answer</h3>
-                                <p>
-                                    Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
-                                    et consequat felis. Quisque condimentum.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="layout-block">
-                            <div class="phone-ico"></div>
-                            <div class="text-element">
-                                <h3>Responsive Layout</h3>
-                                <p>
-                                    Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit
-                                    nunc ligula. Prae-sent elit leo.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="support-block">
-                            <div class="bubble-ico"></div>
-                            <div class="text-element">
-                                <h3>24 / 7 Support</h3>
-                                <p>
-                                    Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a
-                                    sem erat. Pellen-tesque egestas venenatis lorem.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="star-block">
-                            <div class="star-ico"></div>
-                            <div class="text-element-star">
-                                <h3>Feel Like A Star</h3>
-                                <p>
-                                    Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
-                                    Fusce vitae aliquam tellus.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="Portfolio" class="Portfolio">
-                <div class="potfolio-upper-block">
-                    <h2>Portfolio</h2>
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                    </p>
-
-                    <div id="PortfolioBtn" class="button-list">
-                        <button id="BAll" type="button">All</button>
-                        <button id="BWeb" type="button">Web Design</button>
-                        <button id="BGraphic" type="button">Graphic Design</button>
-                        <button id="BArt" type="button">Artwork</button>
-                    </div>
-
-                </div>
-                <figure id="Album" class="Album">
-                    <div class="Album-img-block"><img src="assets/img/ship.png" alt="Ship" class="first-img Album_img">
-                    </div>
-                    <div class="Album-img-block"><img src="assets/img/girl.png" alt="Orange girl"
-                            class="second-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Town.png" alt="Town" class="third-img Album_img">
-                    </div>
-                    <div class="Album-img-block"><img src="assets/img/Robot.png" alt="Robot"
-                            class="forth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Hares.png" alt="Hares"
-                            class="fifth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/GreenObj.png" alt="Bunch of green objects"
-                            class="sixth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Aliens.png" alt="Aliens"
-                            class="seventh-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Chicken.png" alt="Chickens"
-                            class="eighth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/RedCastle.png" alt="Red Castle"
-                            class="ninth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Letters.png" alt="Letters"
-                            class="tenth-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/CreatureWhite.png" alt="White creature"
-                            class="eleventh-img Album_img"></div>
-                    <div class="Album-img-block"><img src="assets/img/Radio.png" alt="Radio"
-                            class="twelfth-img Album_img"></div>
-                </figure>
-
-            </section>
-            <section id="About" class="About-Us">
-                <h2>About Us</h2>
-                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-                    Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+        </section>
+        <section id="Services" class="Our-Services">
+            <div class="services-wrapper">
+                <h2>Our Services</h2>
+                <p>
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+                    Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
+                    lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+                    tortor mauris condimentum nibh.
                 </p>
-                <div class="crew-cards">
-                    <div class="first-person">
-                        <img src="assets/img/photo1.png" alt="photo">
-                        <h3>Adam Jensen</h3>
-                        <p>Quisque luctus,quam eget molestie commodo.lacus purus cursus purus, nec rutrum tellus dolor
-                            id
-                            lorem.</p>
-                        <div class="social-media-links">
-                            <span><a href="#" class="facebook-link"></a></span>
-                            <span><a href="#" class="google-link"></a></span>
-                            <span><a href="#" class="twitter-link"></a></span>
-                            <span><a href="#" class="linkedIn-link"></a></span>
-                        </div>
-                    </div>
-                    <div class="second-person">
-                        <img src="assets/img/photo2.png" alt="photo">
-                        <h3>Desmond Miles</h3>
-                        <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut,
-                            ultrices velit.</p>
 
-                        <div class="social-media-links">
-                            <span><a href="#" class="facebook-link"></a></span>
-                            <span><a href="#" class="google-link"></a></span>
-                            <span><a href="#" class="twitter-link"></a></span>
-                            <span><a href="#" class="linkedIn-link"></a></span>
+
+                <ul class="service-list">
+                    <li class="design-block">
+                        <div class="pen-ico"></div>
+                        <div class="text-element">
+                            <h3>Custom Design</h3>
+                            <p>
+                                Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                                laoreet, viverra lacus ut, ultrices velit.
+                            </p>
                         </div>
-                    </div>
-                    <div class="third-person">
-                        <img src="assets/img/photo3.png" alt="photo">
-                        <h3>Scolara Visari</h3>
-                        <p>Nulla sed nunc et tortor luctus faucibus. Marbi at aliquet turpis, et consequat felis.
-                            Quisque
-                            condimentum.</p>
-                        <div class="social-media-links">
-                            <span><a href="#" class="facebook-link"></a></span>
-                            <span><a href="#" class="google-link"></a></span>
-                            <span><a href="#" class="twitter-link"></a></span>
-                            <span><a href="#" class="linkedIn-link"></a></span>
+                    </li>
+                    <li class="idea-block">
+                        <div class="bulb-ico"></div>
+                        <div class="text-element">
+                            <h3>Inovative Ideas</h3>
+                            <p>
+                                Quisque luctus, quam eget molestie com-modo, lacus purus curus purus, nec rutrum
+                                tellus dolor id lorem.
+                            </p>
                         </div>
-                    </div>
+                    </li>
+                    <li class="love-block">
+                        <div class="heart-ico"></div>
+                        <div class="text-element-heart">
+                            <h3>Love Is The Answer</h3>
+                            <p>
+                                Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
+                                et consequat felis. Quisque condimentum.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layout-block">
+                        <div class="phone-ico"></div>
+                        <div class="text-element">
+                            <h3>Responsive Layout</h3>
+                            <p>
+                                Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit
+                                nunc ligula. Prae-sent elit leo.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="support-block">
+                        <div class="bubble-ico"></div>
+                        <div class="text-element">
+                            <h3>24 / 7 Support</h3>
+                            <p>
+                                Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a
+                                sem erat. Pellen-tesque egestas venenatis lorem.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="star-block">
+                        <div class="star-ico"></div>
+                        <div class="text-element-star">
+                            <h3>Feel Like A Star</h3>
+                            <p>
+                                Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+                                Fusce vitae aliquam tellus.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="Portfolio" class="Portfolio">
+            <div class="potfolio-upper-block">
+                <h2>Portfolio</h2>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                </p>
+
+                <div id="PortfolioBtn" class="button-list">
+                    <button id="BAll" type="button">All</button>
+                    <button id="BWeb" type="button">Web Design</button>
+                    <button id="BGraphic" type="button">Graphic Design</button>
+                    <button id="BArt" type="button">Artwork</button>
                 </div>
 
-            </section>
+            </div>
+            <figure id="Album" class="Album">
+                <div class="Album-img-block"><img src="assets/img/ship.png" alt="Ship" class="first-img Album_img">
+                </div>
+                <div class="Album-img-block"><img src="assets/img/girl.png" alt="Orange girl"
+                        class="second-img Album_img"></div>
+                <div class="Album-img-block"><img src="assets/img/Town.png" alt="Town" class="third-img Album_img">
+                </div>
+                <div class="Album-img-block"><img src="assets/img/Robot.png" alt="Robot" class="forth-img Album_img">
+                </div>
+                <div class="Album-img-block"><img src="assets/img/Hares.png" alt="Hares" class="fifth-img Album_img">
+                </div>
+                <div class="Album-img-block"><img src="assets/img/GreenObj.png" alt="Bunch of green objects"
+                        class="sixth-img Album_img"></div>
+                <div class="Album-img-block"><img src="assets/img/Aliens.png" alt="Aliens"
+                        class="seventh-img Album_img"></div>
+                <div class="Album-img-block"><img src="assets/img/Chicken.png" alt="Chickens"
+                        class="eighth-img Album_img"></div>
+                <div class="Album-img-block"><img src="assets/img/RedCastle.png" alt="Red Castle"
+                        class="ninth-img Album_img"></div>
+                <div class="Album-img-block"><img src="assets/img/Letters.png" alt="Letters"
+                        class="tenth-img Album_img"></div>
+                <div class="Album-img-block"><img src="assets/img/CreatureWhite.png" alt="White creature"
+                        class="eleventh-img Album_img"></div>
+                <div class="Album-img-block"><img src="assets/img/Radio.png" alt="Radio" class="twelfth-img Album_img">
+                </div>
+            </figure>
 
-            <section id="Contact" class="Contact">
-                <h2>Get a Quote</h2>
-                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-                    Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                <div class="Contact-Field">
-                    <form id="myForm" name="Contact-Info" method="post" action="#" autocomplete="off">
-                        <input id="name" type="text" name="name" class="name-input" placeholder="Name (Required)"
-                            required>
-                        <input id="email" type="email" name="email" class="email-input" placeholder="Email (Required)"
-                            required>
-                        <input type="text" id="subject" class="subject-input" placeholder="Subject">
-                        <textarea id="details" cols="50" rows="50"
-                            placeholder="Describe your project in detail..."></textarea>
-                        <button id="btn" name="submit" type="submit" class="submit-button">Submit</button>
-                        <div id="message-block" class="hidden">
-                            <div id="message">
-                                <p>Письмо отправлено.</p>
-                                <p id="Theme"></p>
-                                <p id="Description"></p>
-                                <br>
-                                <button id="close-btn">OK</button>
-                            </div>
-                        </div>
-
-                    </form>
-
-                    <div class="Contact-Information">
-                        <h3>Contact Information</h3>
-                        <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver ra nibh.
-                            Fusce vitae aliquam tellus. Proin sit amet volutpat libero.
-                            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
-                        <ul class="Contact-Items">
-                            <li><a href="#"><span class="adress-icon"></span>Elm St. 14/05 Lost City</a></li>
-                            <li><a href="tel:035283318635"><span class="phone-icon"></span>03528 331 86 35</a></li>
-                            <li><a href="mailto:info@singolo.com"><span class="mail-icon"></span>info@singolo.com</a>
-                            </li>
-                        </ul>
+        </section>
+        <section id="About" class="About-Us">
+            <h2>About Us</h2>
+            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+                Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+            </p>
+            <div class="crew-cards">
+                <div class="first-person">
+                    <img src="assets/img/photo1.png" alt="photo">
+                    <h3>Adam Jensen</h3>
+                    <p>Quisque luctus,quam eget molestie commodo.lacus purus cursus purus, nec rutrum tellus dolor
+                        id
+                        lorem.</p>
+                    <div class="social-media-links">
+                        <span><a href="#" class="facebook-link"></a></span>
+                        <span><a href="#" class="google-link"></a></span>
+                        <span><a href="#" class="twitter-link"></a></span>
+                        <span><a href="#" class="linkedIn-link"></a></span>
                     </div>
                 </div>
+                <div class="second-person">
+                    <img src="assets/img/photo2.png" alt="photo">
+                    <h3>Desmond Miles</h3>
+                    <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut,
+                        ultrices velit.</p>
 
-            </section>
-
-
-        </main>
-        <footer class="footer">
-            <div class="footer-items">
-                <h5>&#169; Copyright 2013</h5>
-                <div class="social-media-links">
-                    <span><a href="#" class="facebook-link"></a></span>
-                    <span><a href="#" class="google-link"></a></span>
-                    <span><a href="#" class="twitter-link"></a></span>
-                    <span><a href="#" class="linkedIn-link"></a></span>
+                    <div class="social-media-links">
+                        <span><a href="#" class="facebook-link"></a></span>
+                        <span><a href="#" class="google-link"></a></span>
+                        <span><a href="#" class="twitter-link"></a></span>
+                        <span><a href="#" class="linkedIn-link"></a></span>
+                    </div>
+                </div>
+                <div class="third-person">
+                    <img src="assets/img/photo3.png" alt="photo">
+                    <h3>Scolara Visari</h3>
+                    <p>Nulla sed nunc et tortor luctus faucibus. Marbi at aliquet turpis, et consequat felis.
+                        Quisque
+                        condimentum.</p>
+                    <div class="social-media-links">
+                        <span><a href="#" class="facebook-link"></a></span>
+                        <span><a href="#" class="google-link"></a></span>
+                        <span><a href="#" class="twitter-link"></a></span>
+                        <span><a href="#" class="linkedIn-link"></a></span>
+                    </div>
                 </div>
             </div>
 
-        </footer>
+        </section>
+
+        <section id="Contact" class="Contact">
+            <h2>Get a Quote</h2>
+            <p class="Contact-p">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+                Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <div class="Contact-Field">
+                <form id="myForm" name="Contact-Info" method="post" action="#" autocomplete="off">
+                    <input id="name" type="text" name="name" class="name-input" placeholder="Name (Required)" required>
+                    <input id="email" type="email" name="email" class="email-input" placeholder="Email (Required)"
+                        required>
+                    <input type="text" id="subject" class="subject-input" placeholder="Subject">
+                    <textarea id="details" cols="50" rows="50"
+                        placeholder="Describe your project in detail..."></textarea>
+                    <button id="btn" name="submit" type="submit" class="submit-button">Submit</button>
+                    <div id="message-block" class="hidden">
+                        <div id="message">
+                            <p>Письмо отправлено.</p>
+                            <p id="Theme"></p>
+                            <p id="Description"></p>
+                            <br>
+                            <button id="close-btn">OK</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="Contact-Information">
+                    <h3>Contact Information</h3>
+                    <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver ra nibh.
+                        Fusce vitae aliquam tellus. Proin sit amet volutpat libero.
+                        Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+                    <ul class="Contact-Items">
+                        <li><a href="#"><span class="adress-icon"></span>Elm St. 14/05 Lost City</a></li>
+                        <li><a href="tel:035283318635"><span class="phone-icon"></span>03528 331 86 35</a></li>
+                        <li><a href="mailto:info@singolo.com"><span class="mail-icon"></span>info@singolo.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer class="footer">
+        <div class="footer-items">
+            <h5>&#169; Copyright 2013</h5>
+            <div class="social-media-links">
+                <span><a href="#" class="facebook-link"></a></span>
+                <span><a href="#" class="google-link"></a></span>
+                <span><a href="#" class="twitter-link"></a></span>
+                <span><a href="#" class="linkedIn-link"></a></span>
+            </div>
+        </div>
+
+    </footer>
     </div>
     <script src="script.js"></script>
 </body>
