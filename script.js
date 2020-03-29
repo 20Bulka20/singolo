@@ -44,9 +44,11 @@ function onScroll() {
     function switchMenu(){
         if(burgmenu.classList.contains('burger-menu-active')){
             burgmenu.classList.remove('burger-menu-active');
+            document.body.style.overflow = '';
             }
             else {
                 burgmenu.classList.add('burger-menu-active');
+                document.body.style.overflow = 'hidden';
             }
     }
 
